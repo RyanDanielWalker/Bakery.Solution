@@ -17,7 +17,7 @@ namespace Bakery.Tests
     [TestMethod]
     public void GetLoafPrice_ReturnsLoafPrice_Int()
     {
-      int thisLoaf = 4;
+      int thisLoaf = 5;
       Bread newBread = new Bread(1);
       int result = newBread.LoafPrice;
       Assert.AreEqual(thisLoaf, result);
