@@ -34,20 +34,20 @@ namespace Bakery.Tests
     [TestMethod]
     public void CalculateBreadDiscount_CalculatesAndSetsDiscountPrice_Bread()
     {
-      int thisDiscount = 25;
+      int breadDiscount = 25;
       Bread newBread = new Bread(15);
       newBread.CalculateBreadDiscount();
       int result = newBread.BreadDiscount;
-      Assert.AreEqual(thisDiscount, result);
+      Assert.AreEqual(breadDiscount, result);
     }
     [TestMethod]
     public void CalculateBreadDiscount_CalculateTotalCostBasedOnDiscount_Bread()
     {
-      int thisTotal = 50;
+      int breadTotal = 50;
       Bread newBread = new Bread(15);
       newBread.CalculateBreadDiscount();
       int result = newBread.BreadTotalCost;
-      Assert.AreEqual(thisTotal, result);
+      Assert.AreEqual(breadTotal, result);
     }
   }
 }

@@ -25,5 +25,10 @@ namespace Bakery.Models
     {
       return PastryTotalCost;
     }
+    public void CalculatePastryDiscount()
+    {
+      PastryDiscount = PastriesOrdered / 3;
+      PastryTotalCost = (PastriesOrdered * PastryPrice) - PastryDiscount;
+    }
   }
 }

@@ -31,6 +31,17 @@ namespace Bakery.Tests
       int result = newPastry.GetPastryTotal();
       Assert.AreEqual(pastryTotal, result);
     }
+    [TestMethod]
+    public void CalculatePastryDiscount_CalculateAndSetDiscountPrice_Pastry()
+    {
+      int pastryDiscount = 4;
+      Pastry newPastry = new Pastry(15);
+      newPastry.CalculatePastryDiscount();
+      int result = newPastry.PastryDiscount;
+      Assert.AreEqual(pastryDiscount, result);
+
+
+    }
 
   }
 }
