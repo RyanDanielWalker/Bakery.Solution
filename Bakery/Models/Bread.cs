@@ -10,7 +10,6 @@ namespace Bakery.Models
     public int LoavesOrdered { get; set; }
     public int Discount { get; set; }
 
-
     public Bread(int loavesOrdered)
     {
       LoavesOrdered = loavesOrdered;
@@ -18,20 +17,18 @@ namespace Bakery.Models
       TotalCost = 0;
       Discount = 0;
     }
-
     public int GetLoafPrice()
     {
       return LoafPrice;
     }
-
     public int GetBreadTotal()
     {
       return TotalCost;
     }
     public void CalculateDiscount()
     {
-      int theseLoaves = LoavesOrdered / 3;
-      Discount = theseLoaves * 5;
+      int discountLoaves = LoavesOrdered / 3;
+      Discount = discountLoaves * 5;
       TotalCost = (LoavesOrdered * LoafPrice) - Discount;
     }
   }

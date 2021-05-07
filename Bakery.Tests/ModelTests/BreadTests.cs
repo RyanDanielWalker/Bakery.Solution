@@ -40,6 +40,15 @@ namespace Bakery.Tests
       int result = newBread.Discount;
       Assert.AreEqual(thisDiscount, result);
     }
+    [TestMethod]
+    public void CalculateDiscount_CalculateTotalCostBasedOnDiscount_Bread()
+    {
+      int thisTotal = 55;
+      Bread newBread = new Bread(15);
+      newBread.CalculateDiscount();
+      int result = newBread.TotalCost;
+      Assert.AreEqual(thisTotal, result);
+    }
   }
 }
 
