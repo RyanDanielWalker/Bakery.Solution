@@ -28,9 +28,7 @@ namespace CounterProgram
       Console.WriteLine("How many loaves of bread would you like?");
       Console.ForegroundColor = ConsoleColor.Blue;
       string loavesOrderedString = Console.ReadLine();
-
       int loavesOrdered = int.Parse(loavesOrderedString);
-
       Bread userBread = new Bread(loavesOrdered);
       userBread.CalculateBreadDiscount();
       Console.ForegroundColor = ConsoleColor.Red;
@@ -49,6 +47,8 @@ namespace CounterProgram
       Console.ForegroundColor = ConsoleColor.Green;
       Console.WriteLine("Your total is $" + (userBread.GetBreadTotal() + userPastry.GetPastryTotal()) + ".00");
       Console.WriteLine(userBread.LoavesOrdered);
+
+
     }
   }
 }
