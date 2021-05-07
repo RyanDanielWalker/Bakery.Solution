@@ -31,14 +31,24 @@ namespace Bakery.Tests
       int result = newBread.TotalCost;
       Assert.AreEqual(orderTotal, result);
     }
+    // [TestMethod]
+    // public void CalculateFreeLoaves()
+    // {
+    //   int theseLoaves = 2;
+    //   Bread newBread = new Bread(6);
+    //   newBread.CalculateFreeLoaves();
+    //   int result = newBread.FreeLoaves;
+    //   Assert.AreEqual(theseLoaves, result);
+    // }
+
     [TestMethod]
-    public void CalculateFreeLoaves()
+    public void CalculateDiscount_CalculatesAndSetsDiscountPrice_Bread()
     {
-      int theseLoaves = 2;
+      int thisDiscount = 10;
       Bread newBread = new Bread(6);
-      newBread.CalculateFreeLoaves();
-      int result = newBread.FreeLoaves;
-      Assert.AreEqual(theseLoaves, result);
+      newBread.CalculateDiscount();
+      int result = newBread.Discount;
+      Assert.AreEqual(thisDiscount, result);
     }
   }
 }

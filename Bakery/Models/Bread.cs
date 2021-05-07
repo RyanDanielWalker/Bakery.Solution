@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace Bakery.Models
 {
@@ -7,7 +8,8 @@ namespace Bakery.Models
     public int LoafPrice { get; set; }
     public int TotalCost { get; set; }
     public int LoavesOrdered { get; set; }
-    public int FreeLoaves { get; set; }
+    // public int FreeLoaves { get; set; }
+    public int Discount { get; set; }
 
 
     public Bread(int loavesOrdered)
@@ -15,7 +17,7 @@ namespace Bakery.Models
       LoavesOrdered = loavesOrdered;
       LoafPrice = 5;
       TotalCost = 0;
-      FreeLoaves = 0;
+      Discount = 0;
     }
 
     public int GetLoafPrice()
@@ -27,18 +29,26 @@ namespace Bakery.Models
     {
       return TotalCost;
     }
-    public void CalculateFreeLoaves()
+    public void CalculateDiscount()
     {
-      FreeLoaves = LoavesOrdered / 3;
-      if (FreeLoaves % 1 == 0)
+      int theseLoaves = LoavesOrdered / 3;
+      if (theseLoaves % 1 == 0)
       {
-        TotalCost -= (FreeLoaves * 5);
+        Discount = theseLoaves * 5;
+        TotalCost = (LoavesOrdered * LoafPrice) - Discount;
       }
+      else
+      {
+        Discount = Math.Floor(theseLoaves);
+      }
+
+
+
+
+
+
+
+
     }
-
-
-
-
-
   }
 }
