@@ -19,17 +19,17 @@ namespace Bakery.Tests
     {
       int thisLoaf = 5;
       Bread newBread = new Bread(1);
-      int result = newBread.LoafPrice;
+      int result = newBread.GetLoafPrice();
       Assert.AreEqual(thisLoaf, result);
     }
     [TestMethod]
-    public void GetBreadTotal_ReturnTotalCost_Int()
+    public void GetBreadTotal_ReturnBreadTotalCost_Int()
     {
-      int orderTotal = 10;
+      int breadTotal = 10;
       Bread newBread = new Bread(2);
       newBread.BreadTotalCost = 10;
-      int result = newBread.BreadTotalCost;
-      Assert.AreEqual(orderTotal, result);
+      int result = newBread.GetBreadTotal();
+      Assert.AreEqual(breadTotal, result);
     }
     [TestMethod]
     public void CalculateBreadDiscount_CalculatesAndSetsDiscountPrice_Bread()
