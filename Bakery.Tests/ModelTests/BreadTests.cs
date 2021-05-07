@@ -43,7 +43,7 @@ namespace Bakery.Tests
     [TestMethod]
     public void CalculateDiscount_CalculateTotalCostBasedOnDiscount_Bread()
     {
-      int thisTotal = 55;
+      int thisTotal = 50;
       Bread newBread = new Bread(15);
       newBread.CalculateDiscount();
       int result = newBread.TotalCost;
