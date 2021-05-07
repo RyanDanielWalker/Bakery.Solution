@@ -12,7 +12,15 @@ namespace Bakery.Tests
     public void PastryConstructor_CreateInstanceOfPastry_Pastry()
     {
       Pastry newPastry = new Pastry(15);
-      Assert.AreEqual(typeof(Bread), newPastry.GetType());
+      Assert.AreEqual(typeof(Pastry), newPastry.GetType());
+    }
+    [TestMethod]
+    public void GetPastryPrice_ReturnsPastryPrice_Int()
+    {
+      int thisPastry = 5;
+      Pastry newPastry = new Pastry(15);
+      int result = newPastry.PastryPrice;
+      Assert.AreEqual(thisPastry, result);
     }
 
   }
