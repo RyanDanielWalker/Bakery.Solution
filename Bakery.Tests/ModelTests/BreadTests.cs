@@ -34,7 +34,7 @@ namespace Bakery.Tests
     [TestMethod]
     public void CalculateFreeLoaves()
     {
-      int theseLoaves = 1;
+      int theseLoaves = 2;
       Bread newBread = new Bread(6);
       newBread.CalculateFreeLoaves();
       int result = newBread.FreeLoaves;
