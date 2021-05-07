@@ -17,8 +17,8 @@ namespace Bakery.Tests
     [TestMethod]
     public void GetPastryPrice_ReturnsPastryPrice_Int()
     {
-      int thisPastry = 5;
-      Pastry newPastry = new Pastry(15);
+      int thisPastry = 2;
+      Pastry newPastry = new Pastry(1);
       int result = newPastry.PastryPrice;
       Assert.AreEqual(thisPastry, result);
     }
