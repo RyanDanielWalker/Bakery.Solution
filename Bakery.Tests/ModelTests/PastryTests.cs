@@ -43,7 +43,7 @@ namespace Bakery.Tests
     [TestMethod]
     public void CalculatePastryDiscount_CalculatePastryTotalCostBasedOnDiscount_Pastry()
     {
-      int pastryTotal = 45;
+      int pastryTotal = 25;
       Pastry newPastry = new Pastry(15);
       newPastry.CalculatePastryDiscount();
       int result = newPastry.PastryTotalCost;
