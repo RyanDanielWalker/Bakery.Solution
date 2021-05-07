@@ -10,10 +10,13 @@ namespace Bakery.Models
     public int FreeLoaves { get; set; }
 
 
-    // public Bread(int loavesOrdered)
-    // {
-    //   // 
-    // }
+    public Bread(int loavesOrdered)
+    {
+      LoavesOrdered = loavesOrdered;
+      LoafPrice = 5;
+      TotalCost = 0;
+      FreeLoaves = 0;
+    }
 
     public int GetLoafPrice()
     {
