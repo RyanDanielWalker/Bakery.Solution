@@ -8,7 +8,6 @@ namespace Bakery.Models
     public int LoafPrice { get; set; }
     public int TotalCost { get; set; }
     public int LoavesOrdered { get; set; }
-    // public int FreeLoaves { get; set; }
     public int Discount { get; set; }
 
 
