@@ -32,23 +32,8 @@ namespace Bakery.Models
     public void CalculateDiscount()
     {
       int theseLoaves = LoavesOrdered / 3;
-      if (theseLoaves % 1 == 0)
-      {
-        Discount = theseLoaves * 5;
-        TotalCost = (LoavesOrdered * LoafPrice) - Discount;
-      }
-      else
-      {
-        Discount = Math.Floor(theseLoaves);
-      }
-
-
-
-
-
-
-
-
+      Discount = theseLoaves * 5;
+      TotalCost = (LoavesOrdered * LoafPrice) - Discount;
     }
   }
 }

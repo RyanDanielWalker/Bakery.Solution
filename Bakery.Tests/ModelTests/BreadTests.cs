@@ -44,8 +44,8 @@ namespace Bakery.Tests
     [TestMethod]
     public void CalculateDiscount_CalculatesAndSetsDiscountPrice_Bread()
     {
-      int thisDiscount = 10;
-      Bread newBread = new Bread(6);
+      int thisDiscount = 20;
+      Bread newBread = new Bread(15);
       newBread.CalculateDiscount();
       int result = newBread.Discount;
       Assert.AreEqual(thisDiscount, result);
