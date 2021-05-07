@@ -25,7 +25,7 @@ namespace Bakery.Tests
     [TestMethod]
     public void GetPastryTotal_ReturnPastryTotalCost_Int()
     {
-      int pastryTotal = 10;
+      int pastryTotal = 8;
       Pastry newPastry = new Pastry(4);
       newPastry.PastryTotalCost = 8;
       int result = newPastry.GetPastryTotal();
