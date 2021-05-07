@@ -27,26 +27,26 @@ namespace Bakery.Tests
     {
       int orderTotal = 10;
       Bread newBread = new Bread(2);
-      newBread.TotalCost = 10;
-      int result = newBread.TotalCost;
+      newBread.BreadTotalCost = 10;
+      int result = newBread.BreadTotalCost;
       Assert.AreEqual(orderTotal, result);
     }
     [TestMethod]
-    public void CalculateDiscount_CalculatesAndSetsDiscountPrice_Bread()
+    public void CalculateBreadDiscount_CalculatesAndSetsDiscountPrice_Bread()
     {
       int thisDiscount = 25;
       Bread newBread = new Bread(15);
-      newBread.CalculateDiscount();
-      int result = newBread.Discount;
+      newBread.CalculateBreadDiscount();
+      int result = newBread.BreadDiscount;
       Assert.AreEqual(thisDiscount, result);
     }
     [TestMethod]
-    public void CalculateDiscount_CalculateTotalCostBasedOnDiscount_Bread()
+    public void CalculateBreadDiscount_CalculateTotalCostBasedOnDiscount_Bread()
     {
       int thisTotal = 50;
       Bread newBread = new Bread(15);
-      newBread.CalculateDiscount();
-      int result = newBread.TotalCost;
+      newBread.CalculateBreadDiscount();
+      int result = newBread.BreadTotalCost;
       Assert.AreEqual(thisTotal, result);
     }
   }
