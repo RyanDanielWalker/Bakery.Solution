@@ -25,7 +25,7 @@ namespace Bakery.Tests
     [TestMethod]
     public void GetBreadTotal_ReturnTotalCost_Int()
     {
-      int orderTotal = 9;
+      int orderTotal = 10;
       Bread newBread = new Bread(2);
       newBread.TotalCost = 10;
       int result = newBread.TotalCost;
