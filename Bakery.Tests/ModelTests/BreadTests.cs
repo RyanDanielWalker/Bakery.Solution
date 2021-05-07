@@ -14,6 +14,14 @@ namespace Bakery.Tests
       Bread newBreadOrder = new Bread(12);
       Assert.AreEqual(typeof(Bread), newBreadOrder.GetType());
     }
+    [TestMethod]
+    public void GetLoafPrice_ReturnsLoafPrice_Int()
+    {
+      int thisLoaf = 4;
+      Bread newBread = new Bread(1);
+      int result = newBread.LoafPrice;
+      Assert.AreEqual(thisLoaf, result);
+    }
   }
 }
 
