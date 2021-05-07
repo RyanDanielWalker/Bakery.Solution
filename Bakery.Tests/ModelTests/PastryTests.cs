@@ -34,7 +34,7 @@ namespace Bakery.Tests
     [TestMethod]
     public void CalculatePastryDiscount_CalculateAndSetDiscountPrice_Pastry()
     {
-      int pastryDiscount = 4;
+      int pastryDiscount = 5;
       Pastry newPastry = new Pastry(15);
       newPastry.CalculatePastryDiscount();
       int result = newPastry.PastryDiscount;
