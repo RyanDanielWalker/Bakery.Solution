@@ -46,6 +46,7 @@ namespace CounterProgram
       Console.WriteLine("    .");
       Console.ForegroundColor = ConsoleColor.Green;
       Console.WriteLine("Your total is $" + (userBread.GetBreadTotal() + userPastry.GetPastryTotal()) + ".00");
+      Console.WriteLine(userBread.LoavesOrdered);
     }
   }
 }
