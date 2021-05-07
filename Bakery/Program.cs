@@ -38,17 +38,14 @@ namespace CounterProgram
       int pastriesOrdered = int.Parse(pastriesOrderedString);
       Pastry userPastry = new Pastry(pastriesOrdered);
       userPastry.CalculatePastryDiscount();
-      Console.ForegroundColor = ConsoleColor.Blue;
-
-
-
-
-
-
-
-
-
-
+      Console.WriteLine("Excellent! Let me calculate your total for you.");
+      Console.WriteLine("    .");
+      Console.WriteLine(" .");
+      Console.WriteLine("    .");
+      Console.WriteLine(" .");
+      Console.WriteLine("    .");
+      Console.ForegroundColor = ConsoleColor.Green;
+      Console.WriteLine("Your total is $" + (userBread.GetBreadTotal() + userPastry.GetPastryTotal()) + ".00");
     }
   }
 }
