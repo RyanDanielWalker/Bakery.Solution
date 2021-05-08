@@ -1,5 +1,6 @@
 ﻿using System;
 using Bakery.Models;
+using System.Collections.Generic;
 
 namespace CounterProgram
 {
@@ -81,7 +82,7 @@ namespace CounterProgram
       }
       else if (userAddToOrderAnswer == "no")
       {
-        // CalculateTotal();
+        CalculateTotal();
       }
       else
       {
@@ -111,6 +112,23 @@ namespace CounterProgram
 
     public static void CalculateTotal()
     {
+      int breadTotal = 0;
+      int pastryTotal = 0;
+      List<Bread> breadTotalList = Bread.GetAll();
+      List<Pastry> pastryTotalList = Pastry.GetAll();
+      foreach (Bread element in breadTotalList)
+      {
+        element.CalculateBreadDiscount();
+        breadTotal += element.GetBreadTotal();
+      }
+      foreach (Pastry element in pastryTotalList)
+      {
+        element.CalculatePastryDiscount();
+        pastryTotal += element.GetPastryTotal();
+      }
+
+      Console.WriteLine(breadTotal);
+      Console.WriteLine(pastryTotal);
 
     }
   }

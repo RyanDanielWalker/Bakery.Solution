@@ -20,12 +20,12 @@ namespace Bakery.Tests
       Assert.AreEqual(typeof(Bread), newBreadOrder.GetType());
     }
     [TestMethod]
-    public void GetLoafPrice_ReturnsLoafPrice_Int()
+    public void GetBreadDiscount_ReturnsBreadDiscount_Int()
     {
-      int thisLoaf = 5;
+      int thisLoafDiscount = 5;
       Bread newBread = new Bread(1);
-      int result = newBread.GetLoafPrice();
-      Assert.AreEqual(thisLoaf, result);
+      int result = newBread.GetBreadDiscount();
+      Assert.AreEqual(thisLoafDiscount, result);
     }
     [TestMethod]
     public void GetBreadTotal_ReturnBreadTotalCost_Int()

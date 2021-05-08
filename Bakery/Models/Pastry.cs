@@ -19,9 +19,9 @@ namespace Bakery.Models
       PastryDiscount = 0;
       _pastryOrder.Add(this);
     }
-    public int GetPastryPrice()
+    public int GetPastryDiscount()
     {
-      return PastryPrice;
+      return PastryDiscount;
     }
     public int GetPastryTotal()
     {

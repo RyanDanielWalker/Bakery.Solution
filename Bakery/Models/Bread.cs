@@ -19,9 +19,9 @@ namespace Bakery.Models
       BreadDiscount = 0;
       _breadOrder.Add(this);
     }
-    public int GetLoafPrice()
+    public int GetBreadDiscount()
     {
-      return LoafPrice;
+      return BreadDiscount;
     }
     public int GetBreadTotal()
     {

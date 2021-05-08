@@ -19,12 +19,12 @@ namespace Bakery.Tests
       Assert.AreEqual(typeof(Pastry), newPastry.GetType());
     }
     [TestMethod]
-    public void GetPastryPrice_ReturnsPastryPrice_Int()
+    public void GetPastryDiscount_ReturnsPastryDiscount_Int()
     {
-      int thisPastry = 2;
+      int thisPastryDiscount = 2;
       Pastry newPastry = new Pastry(1);
-      int result = newPastry.GetPastryPrice();
-      Assert.AreEqual(thisPastry, result);
+      int result = newPastry.GetPastryDiscount();
+      Assert.AreEqual(thisPastryDiscount, result);
     }
     [TestMethod]
     public void GetPastryTotal_ReturnPastryTotalCost_Int()
