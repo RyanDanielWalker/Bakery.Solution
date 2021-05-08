@@ -5,9 +5,6 @@ namespace CounterProgram
 {
   class Program
   {
-
-    // public static Bread userBread = new Bread(loavesOrdered);
-    // public static int loavesOrdered;
     public static void Main(string[] args)
     { }
   }

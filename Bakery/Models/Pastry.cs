@@ -9,6 +9,7 @@ namespace Bakery.Models
     public int PastryTotalCost { get; set; }
     public int PastriesOrdered { get; set; }
     public int PastryDiscount { get; set; }
+    private static List<Pastry> _pastryOrder = new List<Pastry> { };
 
     public Pastry(int pastriesOrdered)
     {
@@ -25,10 +26,18 @@ namespace Bakery.Models
     {
       return PastryTotalCost;
     }
+    public static List<Pastry> GetAll()
+    {
+      return _pastryOrder;
+    }
     public void CalculatePastryDiscount()
     {
       PastryDiscount = PastriesOrdered / 3;
       PastryTotalCost = (PastriesOrdered * PastryPrice) - PastryDiscount;
+    }
+    public static void ClearAll()
+    {
+      _pastryOrder.Clear();
     }
   }
 }
