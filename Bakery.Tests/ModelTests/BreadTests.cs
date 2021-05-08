@@ -69,7 +69,7 @@ namespace Bakery.Tests
       Bread newBread = new Bread(loavesOrdered);
       Bread newBread2 = new Bread(loavesOrdered2);
       List<Bread> newList = new List<Bread> { newBread, newBread2 };
-      List<Bread> result = new List<Bread> { };
+      List<Bread> result = Bread.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
   }
