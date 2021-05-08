@@ -60,16 +60,17 @@ namespace Bakery.Tests
       List<Pastry> result = Pastry.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+
     [TestMethod]
-    public void GetAll_ReturnsPastries_PastryList()
+    public void GetAll_ReturnsPastry_PastryList()
     {
-      int pastriesOrdered = 14;
-      int pastriesOrdered2 = 14;
+      int pastriesOrdered = 12;
+      int pastriesOrdered2 = 12;
       Pastry newPastry = new Pastry(pastriesOrdered);
       Pastry newPastry2 = new Pastry(pastriesOrdered2);
-      List<Pastry> newList = new List<Pastry> { newPastry2 };
-      List<Pastry> result = Pastry.GetAll();
-      CollectionAssert.AreEqual(newList, result);
+      List<Pastry> newPastryList = new List<Pastry> { newPastry, newPastry2 };
+      List<Pastry> result2 = Pastry.GetAll();
+      CollectionAssert.AreEqual(newPastryList, result2);
     }
   }
 }
