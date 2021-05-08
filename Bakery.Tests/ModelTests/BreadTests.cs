@@ -61,6 +61,17 @@ namespace Bakery.Tests
       List<Bread> result = Bread.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
+    public void GetAll_ReturnsBread_BreadList()
+    {
+      int loavesOrdered = 14;
+      int loavesOrdered2 = 14;
+      Bread newBread = new Bread(loavesOrdered);
+      Bread newBread2 = new Bread(loavesOrdered2);
+      List<Bread> newList = new List<Bread> { newBread, newBread2 };
+      List<Bread> result = new List<Bread> { };
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
 
