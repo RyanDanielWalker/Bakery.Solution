@@ -6,8 +6,13 @@ using System;
 namespace Bakery.Tests
 {
   [TestClass]
-  public class BreadTests
+  public class BreadTests : IDisposable
   {
+    public void Dispose()
+    {
+      Bread.ClearAll();
+    }
+
     [TestMethod]
     public void BreadConstructor_CreatesInstanceOfBread_Bread()
     {
@@ -49,6 +54,14 @@ namespace Bakery.Tests
       int result = newBread.BreadTotalCost;
       Assert.AreEqual(breadTotal, result);
     }
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_BreadList()
+    {
+      List<Bread> newList = new List<Bread> { };
+      List<Bread> result = Bread.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
+
 

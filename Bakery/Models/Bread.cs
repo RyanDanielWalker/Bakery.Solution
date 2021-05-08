@@ -9,6 +9,7 @@ namespace Bakery.Models
     public int BreadTotalCost { get; set; }
     public int LoavesOrdered { get; set; }
     public int BreadDiscount { get; set; }
+    private static List<Bread> _breadOrder = new List<Bread> { };
 
     public Bread(int loavesOrdered)
     {
@@ -16,6 +17,7 @@ namespace Bakery.Models
       LoafPrice = 5;
       BreadTotalCost = 0;
       BreadDiscount = 0;
+      _breadOrder.Add(this);
     }
     public int GetLoafPrice()
     {
@@ -25,11 +27,19 @@ namespace Bakery.Models
     {
       return BreadTotalCost;
     }
+    public static List<Bread> GetAll()
+    {
+      return _breadOrder;
+    }
     public void CalculateBreadDiscount()
     {
       int discountLoaves = LoavesOrdered / 3;
       BreadDiscount = discountLoaves * 5;
       BreadTotalCost = (LoavesOrdered * LoafPrice) - BreadDiscount;
+    }
+    public static void ClearAll()
+    {
+      // _breadOrder.Clear();
     }
 
   }
