@@ -109,18 +109,10 @@ namespace CounterProgram
       DoNextQuestion();
     }
 
-    // public static void CalculateTotal()
-    // {
-    //   Console.WriteLine("Excellent! Let me calculate your total for you.");
-    //   Console.WriteLine("    .");
-    //   Console.WriteLine(" .");
-    //   Console.WriteLine("    .");
-    //   Console.WriteLine(" .");
-    //   Console.WriteLine("    .");
-    //   Console.ForegroundColor = ConsoleColor.Green;
-    //   Console.WriteLine("Your total is $" + (userBread.GetBreadTotal() + userPastry.GetPastryTotal()) + ".00");
-    //   Console.WriteLine("You saved $" + (userBread.BreadDiscount + userPastry.PastryDiscount) + ".00");
-    // }
+    public static void CalculateTotal()
+    {
+
+    }
   }
 }
 
