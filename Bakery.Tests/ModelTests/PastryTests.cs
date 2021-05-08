@@ -61,7 +61,6 @@ namespace Bakery.Tests
       List<Pastry> result = Pastry.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
-
     [TestMethod]
     public void GetAll_ReturnsPastry_PastryList()
     {
@@ -75,7 +74,3 @@ namespace Bakery.Tests
     }
   }
 }
-
-
-
-

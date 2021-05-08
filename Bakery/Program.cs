@@ -26,7 +26,6 @@ namespace CounterProgram
       Console.WriteLine("Pastries: 3 for $5!");
       OrderType();
     }
-
     public static void OrderType()
     {
       Console.ForegroundColor = ConsoleColor.Red;
@@ -44,12 +43,11 @@ namespace CounterProgram
       }
       else
       {
-        Console.WriteLine("Please enter a valid response");
         Console.WriteLine();
+        Console.WriteLine("Please enter a valid response");
         OrderType();
       }
     }
-
     public static void OrderBread()
     {
       try
@@ -109,30 +107,30 @@ namespace CounterProgram
       }
       DoNextQuestion();
     }
-
     public static void CalculateTotal()
     {
       int breadTotal = 0;
       int pastryTotal = 0;
+      int breadDiscount = 0;
+      int pastryDiscount = 0;
       List<Bread> breadTotalList = Bread.GetAll();
       List<Pastry> pastryTotalList = Pastry.GetAll();
       foreach (Bread element in breadTotalList)
       {
         element.CalculateBreadDiscount();
+        breadDiscount += element.GetBreadDiscount();
         breadTotal += element.GetBreadTotal();
       }
       foreach (Pastry element in pastryTotalList)
       {
         element.CalculatePastryDiscount();
+        pastryDiscount += element.GetPastryDiscount();
         pastryTotal += element.GetPastryTotal();
       }
-
-      Console.WriteLine(breadTotal);
-      Console.WriteLine(pastryTotal);
-
+      Console.ForegroundColor = ConsoleColor.Green;
+      Console.WriteLine();
+      Console.WriteLine("Your order total is $" + (breadTotal + pastryTotal) + ".00");
+      Console.WriteLine("You saved $" + (breadDiscount + pastryDiscount) + ".00");
     }
   }
 }
-
-
-

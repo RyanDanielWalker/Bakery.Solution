@@ -12,7 +12,6 @@ namespace Bakery.Tests
     {
       Bread.ClearAll();
     }
-
     [TestMethod]
     public void BreadConstructor_CreatesInstanceOfBread_Bread()
     {
@@ -75,5 +74,3 @@ namespace Bakery.Tests
     }
   }
 }
-
-
