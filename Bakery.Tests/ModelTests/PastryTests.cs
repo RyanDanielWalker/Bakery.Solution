@@ -22,7 +22,8 @@ namespace Bakery.Tests
     public void GetPastryDiscount_ReturnsPastryDiscount_Int()
     {
       int thisPastryDiscount = 2;
-      Pastry newPastry = new Pastry(1);
+      Pastry newPastry = new Pastry(6);
+      newPastry.PastryDiscount = 2;
       int result = newPastry.GetPastryDiscount();
       Assert.AreEqual(thisPastryDiscount, result);
     }

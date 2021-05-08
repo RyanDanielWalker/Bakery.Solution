@@ -23,7 +23,8 @@ namespace Bakery.Tests
     public void GetBreadDiscount_ReturnsBreadDiscount_Int()
     {
       int thisLoafDiscount = 5;
-      Bread newBread = new Bread(1);
+      Bread newBread = new Bread(3);
+      newBread.BreadDiscount = 5;
       int result = newBread.GetBreadDiscount();
       Assert.AreEqual(thisLoafDiscount, result);
     }
